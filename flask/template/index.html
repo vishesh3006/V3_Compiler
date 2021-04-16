@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="/css/styles.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
     <title>V3-Compiler</title>
 </head>
 <body>
@@ -31,54 +32,37 @@
                     <a class="nav-link" href="/logout">Help</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      SignUp
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/signupAttendee">C</a>
-                      <a class="dropdown-item" href="/signupReviewer">C++</a>
-                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="/signupReviewee">Java</a>
-                    </div> -->
-                    <form>
+                    <!-- <form> -->
                         <div class="form-row">
                           <div class="col-auto my-1">
-                            <select style="color: white ;background-color: #1e1e1e; border-color: #1e1e1e;" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                              <option selected>C</option>
-                              <option value="1">C++</option>
-                              <option value="2">Java</option>
-                              <option value="3">Python</option>
+                            <select style="color: white ;background-color: #1e1e1e; border-color: #1e1e1e;" class="custom-select mr-sm-2" id="language">
+                              <option selected value="C">C</option>
+                              <option value="C++">C++</option>
+                              <option value="Java">Java</option>
+                              <option value="Python">Python</option>
                             </select>
                           </div>
-                          <!-- <div class="col-auto my-1">
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                              <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-                            </div>
-                          </div>
-                          <div class="col-auto my-1">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                        </div> -->
+                    
                         <div class="col-auto my-1">
-                            <button style="background-color: #dc3545;" type="submit" class="btn btn-dark">Run</button>
+                            <button style="background-color: #dc3545;" class="btn btn-dark">Run</button>
                         </div>
-                      </form>
+                    <!-- </form> -->
                   </li>
             </ul>
 
             <span style="padding-left: 8px;" class="navbar-text">
-                Made with 💖 by V3
+                Made with ❤ by V3
             </span>
         </div>
         </nav>
     </div>
     <div id="content" contenteditable="true"></div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="/static/code.js" charset="utf-8"></script>
     <!-- <script src="/js/code.js"></script> -->
+    <script src="/static/code.js" charset="utf-8"></script>
 </body>
 </html>
