@@ -1,3 +1,5 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
 # Logs
 logs
 *.log
@@ -107,3 +109,17 @@ out.c
 out.java
 out.py
 out.cpp
+
+# Python
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
+*.pyo
+*.pyc
