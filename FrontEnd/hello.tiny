@@ -1,4 +1,28 @@
-IF 3 < 4 THEN
-	PRINT "3 < 4"
-ENDIF
-PRINT "V3 COMPILER"
+FUNC cc(LET a) DO
+    IF a == 0 THEN
+        RETURN
+    ENDIF
+    PRINT "HELLO"
+    LET a = a - 1
+    CALL cc(a)
+ENDFUNC
+
+
+
+PRINT "Enter the number of times you want to print hello recursively"
+INPUT a
+CALL cc(a)
+FUNC area(LET a, LET b) DO
+    PRINT "Area of Rectangle: "
+    PRINT a * b
+ENDFUNC
+PRINT ""
+PRINT "Calculate the area of a rectangle"
+PRINT "Enter length and breadth of a rectangle"
+
+INPUT b
+INPUT c
+
+CALL area(b, c)
+
+
