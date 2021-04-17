@@ -1,0 +1,44 @@
+FUNC cdd(LET a) DO
+    IF a == 0 THEN
+        RETURN
+    ENDIF
+    PRINT "HELLO"
+    LET a = a - 1
+    CALL cdd(a)
+ENDFUNC
+
+
+FUNC area(LET a, LET b) DO
+    PRINT "Area of Rectangle: "
+    PRINT a * b
+ENDFUNC
+
+IF 2 < 3 THEN
+	PRINT "aa"
+	IF 3 < 4 THEN
+		PRINT "q"
+	ENDIF
+ENDIF
+
+LET i = 5
+
+WHILE i > 0 REPEAT
+	PRINT i
+	LET i = i - 1
+ENDWHILE
+
+
+PRINT "Enter the number of times you want to print hello recursively"
+INPUT a
+CALL cdd(a)
+
+PRINT ""
+PRINT "Calculate the area of a rectangle"
+PRINT "Enter length and breadth of a rectangle"
+
+INPUT b
+INPUT c
+
+CALL area(b, c)
+
+
