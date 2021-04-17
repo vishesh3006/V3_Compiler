@@ -68,9 +68,15 @@ $(document).ready( () => {
        }
        else {
          document.getElementById('output').style.backgroundColor = '#E54D42'
-         document.getElementById('output').style.borderLeft = '5px solid red '
+         document.getElementById('output').style.borderLeft = '5px solid red'
+         document.getElementById('compiled_output').style.display = 'none';
+         document.getElementById('output_nav').style.display = 'none';
+         document.getElementById('content').style.minHeight = '100%';
+         document.getElementById('content').style.height = 'max-content';
+         document.getElementById('compiled_output').innerText = '';
+         document.getElementById('content').style.overflowY = 'visible';
        }
-       document.getElementById('output').style.display = 'inline-block'
+        document.getElementById('output').style.display = 'inline-block'
         document.getElementById('output').innerHTML =  req.result;
      });
   });
