@@ -7,6 +7,7 @@
   body {
     background-color: #1e1e1e;
     margin: 0 auto;
+    height: 100vh;
   }
   
   div:focus {
@@ -20,7 +21,7 @@
   
   #content {
     white-space: pre;
-    min-height: 100vh;
+    min-height: 90vh;
     height: max-content;
     width: 100%;
     background-color: #1e1e1e;
@@ -44,7 +45,14 @@
     
   }
   #output_nav{
-    display: hidden;
+    display: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #output_nav .navbar-brand {
+    padding-top: .2125rem;
+    padding-bottom: .2125rem;
   }
   #compiled_output{
     display: hidden;
