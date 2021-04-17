@@ -1,7 +1,5 @@
-//jshint esversion:6
-// import express from 'express'
-// import ejs from 'ejs'
-// import bodyParser from 'body-parser'
+// jshint esversion:6
+
 var express = require('express')
 var ejs = require('ejs')
 var bodyParser = require('body-parser')
@@ -46,6 +44,18 @@ function callName(req, res) {
     PythonShell.run('lex.py', options2, function (err, result){
         if(result == null){
             var file = ""
+            var ext = ""
+            if(req.body.lang == 'C'){
+                ext = '.c';
+            }
+            else if(req.body.lang == 'C++'){
+                ext = '.cpp';
+            }
+            else if(req.body.lang == 'Java'){
+                ext = '.java';
+            }
+            else ext = '.py';
+
             if(req.body.lang == 'C' || req.body.lang == 'C++')
                 file = 'parser_check.py';
             else file = 'parser_check_java.py';
@@ -56,19 +66,35 @@ function callName(req, res) {
                             res.send("Compilation Error");
                         }
                         else{
-                            console.log('/compile/' + result.toString());
-                            res.send(result.toString());
+                            var output = "";
+                            fs.readFile('out' + ext, function read(err, data) {
+                                if (err) {
+                                    throw err;
+                                }
+                                output = data.toString();
+                            
+                                // Invoke the next step here however you like
+                                // Put all of the code here (not the best solution)
+                                // processFile(content);   // Or put the next step in a function and invoke it
+                                console.log(output)
+                                console.log('/compile/' + result.toString());
+                                res.send({result: result.toString(),
+                                    output: output
+                                });
+                            })
+                            
                         }
                     });
                     
                 }
                 else{
-                    res.send(result.toString());
+                    res.send({result: result.toString()});
                 }
             })
         }
         else{
-            res.send(result.toString());
+            
+            res.send({result: result.toString()});
         }
     })
 

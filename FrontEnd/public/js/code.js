@@ -50,16 +50,28 @@ $(document).ready( () => {
         console.log("Yes")
       },
      }).then((req, res) =>{
-       if(req == 'Compiling Completed'){
+      //  console.log(req);
+       if(req.result == 'Result: Compiling Completed'){
          document.getElementById('output').style.backgroundColor = '#68CD86'
          document.getElementById('output').style.borderLeft = '5px solid green '
+         document.getElementById('content').style.minHeight = '40vh';
+         document.getElementById('content').style.height = '40vh';
+         document.getElementById('content').style.overflowY = 'scroll';
+         document.getElementById('compiled_output').style.display = 'block';
+         document.getElementById('compiled_output').innerText = req.output;
+         document.getElementById('compiled_output').style.minHeight = '40vh';
+         document.getElementById('compiled_output').style.height = '40vh';
+         document.getElementById('compiled_output').style.overflowY = 'scroll';
+         document.getElementById('output_nav').style.display = 'block';
+         document.getElementById('compile_nav').innerText = 'OUTPUT LANGUAGE: ' + lang;
+
        }
        else {
          document.getElementById('output').style.backgroundColor = '#E54D42'
          document.getElementById('output').style.borderLeft = '5px solid red '
        }
        document.getElementById('output').style.display = 'inline-block'
-        document.getElementById('output').innerHTML = "RESULT: \n" + req;
+        document.getElementById('output').innerHTML =  req.result;
      });
   });
 });

@@ -45,6 +45,6 @@ def main():
         parser.program() # Start the parser.
         emitter.writeFile() # Write the output to file.
 
-    print("Compiling Completed")
+    print("Result: Compiling Completed")
 
 main()
