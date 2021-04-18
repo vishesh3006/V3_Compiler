@@ -47,7 +47,7 @@
                   </li>
             </ul>
 
-            <span style="padding-left: 8px;" class="navbar-text">
+            <span style="padding-left: 8px; color: white;" class="navbar-text">
                 Made with 💖 by V3
             </span>
         </div>
@@ -56,6 +56,7 @@
         
         
         <div id = "output" style="color: white;">
+          
         </div>
         <div id='INPUT'>
           <nav id ="input_nav" class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
@@ -66,8 +67,11 @@
       <div id='OUTPUT'>
         <nav id ="output_nav" class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
           <a id="compile_nav" class="navbar-brand" href="/"></a>
+          <div class="bd-clipboard">
+            <button onclick="copyCode('#compiled_output')" id = "bd-clipboard" class="btn btn-light btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
+        </div>
         </nav>
-        <div id = "compiled_output"></div>
+        <div id = "compiled_output" ></div>
       </div>
 
 

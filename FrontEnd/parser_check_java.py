@@ -7,6 +7,7 @@ from lex import *
 func_count = 0
 if_count = 0
 while_count = 0
+funcPossible = 1
 class Parser:
 
     def __init__(self, lexer):
@@ -77,7 +78,7 @@ class Parser:
 
     # One of the following statements...
     def statement(self):
-
+        global funcPossible
         global func_count
         global if_count
         global while_count
@@ -85,7 +86,7 @@ class Parser:
         # "PRINT" (expression | string)
         if self.checkToken(TokenType.PRINT):
             self.nextToken()
-            
+            funcPossible = 0
             if self.checkToken(TokenType.STRING):
                 # Simple string, so print it.
                 
@@ -101,6 +102,7 @@ class Parser:
         # "IF" comparison "THEN" block "ENDIF"
         elif self.checkToken(TokenType.IF):
             if_count += 1
+            funcPossible = 0
             self.nextToken()
             self.comparison()
 
@@ -117,6 +119,7 @@ class Parser:
 
         # "WHILE" comparison "REPEAT" block "ENDWHILE"
         elif self.checkToken(TokenType.WHILE):
+            funcPossible = 0
             while_count += 1
             self.nextToken()
             self.comparison()
@@ -133,6 +136,10 @@ class Parser:
 
         # "FUNC" ident "() DO" nl {statement} "ENDFUNC" nl
         elif self.checkToken(TokenType.FUNC):
+            if funcPossible == 0:
+                self.abort("FUNCTIONS have to be declared at the start of program only")
+
+            funcPossible = 0
             func_count += 1
             if func_count > 1:
                 self.abort("Cannot Declare Function Inside a Function")
@@ -168,6 +175,7 @@ class Parser:
             for x in arr:
                 self.symbols.remove(x)
             self.match(TokenType.ENDFUNC)
+            funcPossible = 1
             func_count -= 1
 
         elif self.checkToken(TokenType.RETURN):
@@ -176,7 +184,7 @@ class Parser:
 
         # "CALL" ident nl
         elif self.checkToken(TokenType.CALL):
-
+            funcPossible = 0
             self.nextToken()
 
             if self.curToken.text not in self.funcDeclared:
@@ -201,7 +209,7 @@ class Parser:
         # "LABEL" ident
         elif self.checkToken(TokenType.LABEL):
             self.nextToken()
-
+            funcPossible = 0
             # Make sure this label doesn't already exist.
             if self.curToken.text in self.labelsDeclared:
                 self.abort("Label already exists: " + self.curToken.text)
@@ -211,6 +219,7 @@ class Parser:
 
         # "GOTO" ident
         elif self.checkToken(TokenType.GOTO):
+            funcPossible = 0
             self.abort("INVALID KEYWORD: GOTO for DESTINATION Language")
             self.nextToken()
             self.labelsGotoed.add(self.curToken.text)
@@ -219,26 +228,30 @@ class Parser:
         # "LET" ident = expression
         elif self.checkToken(TokenType.LET):
             self.nextToken()
-
+            funcPossible = 0
             #  Check if ident exists in symbol table. If not, declare it.
             if self.curToken.text not in self.symbols:
                 self.symbols.add(self.curToken.text)
+
+            if self.curToken.text in self.funcDeclared:
+                self.abort("INVALID NAME of IDENTIFIER; ALREADY USED for a FUNCTION")
 
             self.match(TokenType.IDENT)
             self.match(TokenType.EQ)
             
             self.expression()
 
-
-
         # "INPUT" ident
         elif self.checkToken(TokenType.INPUT):
             self.nextToken()
-
+            funcPossible = 0
             # If variable doesn't already exist, declare it.
             if self.curToken.text not in self.symbols:
                 self.symbols.add(self.curToken.text)
-            
+
+            if self.curToken.text in self.funcDeclared:
+                self.abort("INVALID NAME of IDENTIFIER; ALREADY USED for a FUNCTION")
+
             self.match(TokenType.IDENT)
 
         # This is not a valid statement. Error!

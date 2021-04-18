@@ -103,3 +103,13 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
 }
+
+function copyCode(element) {
+  var $temp = $("<textarea>");
+  
+  var brRegex = /<br\s*[\/]?>/gi;
+  $("body").append($temp);
+  $temp.val($(element).html().replace(brRegex, "\r\n").replace( /&lt;/g, "<" ).replace( /&gt;/g, ">" ).replace( /&amp;/g, "&" )).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
