@@ -136,13 +136,16 @@ class Parser:
 
         # "FUNC" ident "() DO" nl {statement} "ENDFUNC" nl
         elif self.checkToken(TokenType.FUNC):
+            
+            func_count += 1
+            if func_count > 1:
+                self.abort("Cannot Declare Function Inside a Function")
+            
             if funcPossible == 0:
                 self.abort("FUNCTIONS have to be declared at the start of program only")
 
             funcPossible = 0
-            func_count += 1
-            if func_count > 1:
-                self.abort("Cannot Declare Function Inside a Function")
+
             self.nextToken()
             if self.curToken.text in self.funcDeclared:
                 self.abort("Function Already Exists: " + self.curToken.text)
@@ -325,7 +328,7 @@ class Parser:
             self.nextToken()
         else:
             # Error!
-            self.abort("Unexpected token at " + self.curToken.text)
+            self.abort("Unexpected token instead of Number or Identifier")
 
     # nl ::= '\n'+
     def nl(self):

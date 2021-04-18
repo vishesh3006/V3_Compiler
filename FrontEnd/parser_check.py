@@ -334,7 +334,7 @@ class Parser:
             self.nextToken()
         else:
             # Error!
-            self.abort("Unexpected token at " + self.curToken.text)
+            self.abort("Unexpected token instead of Number or Identifier")
 
     # nl ::= '\n'+
     def nl(self):

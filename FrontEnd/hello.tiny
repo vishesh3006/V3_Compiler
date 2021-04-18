@@ -3,19 +3,18 @@ FUNC cc(LET a) DO
         RETURN
     ENDIF
     PRINT "HELLO"
-    LET a = a - 1
+    LET a = a - 
     CALL cc(a)
 ENDFUNC
-
-
-PRINT "Enter the number of times you want to print hello recursively"
-INPUT a
-CALL cc(a)
 
 FUNC area(LET a, LET b) DO
     PRINT "Area of Rectangle: "
     PRINT a * b
 ENDFUNC
+
+PRINT "Enter the number of times you want to print hello recursively"
+INPUT a
+CALL cc(a)
 
 PRINT ""
 PRINT "Calculate the area of a rectangle"
