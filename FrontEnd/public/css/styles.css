@@ -82,6 +82,20 @@
     display: none;
   }
 
+  .bd-clipboard{
+    
+    display: inline;
+    position: absolute;
+    right: 8%;
+  }
+
+  #bd-clipboard{
+    color: gray;
+    background-color: transparent;
+    border: 1px solid gray;
+  }
+
+
   #about{
     padding-top: 7%;
     padding-right: 5%;
