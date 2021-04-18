@@ -7,15 +7,16 @@ FUNC cc(LET a) DO
     CALL cc(a)
 ENDFUNC
 
+FUNC area(LET a, LET b) DO
+    PRINT "Area of Rectangle: "
+    PRINT a * b
+ENDFUNC
 
 
 PRINT "Enter the number of times you want to print hello recursively"
 INPUT a
 CALL cc(a)
-FUNC area(LET a, LET b) DO
-    PRINT "Area of Rectangle: "
-    PRINT a * b
-ENDFUNC
+
 PRINT ""
 PRINT "Calculate the area of a rectangle"
 PRINT "Enter length and breadth of a rectangle"
