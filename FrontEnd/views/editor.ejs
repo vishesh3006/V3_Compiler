@@ -30,15 +30,6 @@
                     <a class="nav-link" href="/help">Help</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      SignUp
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/signupAttendee">C</a>
-                      <a class="dropdown-item" href="/signupReviewer">C++</a>
-                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="/signupReviewee">Java</a>
-                    </div> -->
                         <div class="form-row">
                           <div class="col-auto my-1">
                             <select style="color: white ;background-color: #1e1e1e; border-color: #1e1e1e;" class="custom-select mr-sm-2" id="language">
@@ -48,16 +39,7 @@
                               <option value="Python">Python</option>
                             </select>
                           </div>
-                          <!-- <div class="col-auto my-1">
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                              <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-                            </div>
-                          </div>
-                          <div class="col-auto my-1">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                        </div> -->
+                          
                         <div class="col-auto my-1">
                             <button id = "button" style="background-color: #dc3545;" class="btn btn-dark">Run</button>
                         </div>
@@ -70,16 +52,23 @@
             </span>
         </div>
         </nav>
+
         
         
-    </div>
-    <div id = "output" style="color: white;">
-    </div>
-    <div id="content" contenteditable="true"></div>
-    <nav id ="output_nav" class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
-      <a id="compile_nav" class="navbar-brand" href="/"></a>
-    </nav>
-    <div id = "compiled_output"></div>
+        <div id = "output" style="color: white;">
+        </div>
+        <div id='INPUT'>
+          <nav id ="input_nav" class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
+            <a id="input_compile_nav" class="navbar-brand" href="/"></a>
+          </nav>
+          <div id="content" contenteditable="true"></div>
+      </div>
+      <div id='OUTPUT'>
+        <nav id ="output_nav" class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
+          <a id="compile_nav" class="navbar-brand" href="/"></a>
+        </nav>
+        <div id = "compiled_output"></div>
+      </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
