@@ -64,3 +64,42 @@
     padding-left: 10px;;
     font-size: 16px;
   }
+
+  #about{
+    padding-top: 7%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 7%;
+  }
+
+  /* #slides{
+    height: 50vh;
+  } */
+
+  #slides{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+  }
+  .carousel .carousel-item {
+    height: 80vh;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 80vh;
+      width: 100%;
+  }
+
+  #help{
+    padding-top: 7%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 7%;
+  }
+
+  .highlight{
+    background-color: #f7f7f9;
+  }

@@ -17,7 +17,13 @@ app.get("/", (req, res) => {
     res.render("editor");
 })
 
+app.get("/about", (req, res) => {
+    res.render("about")
+})
 
+app.get("/help", (req, res) => {
+    res.render("help")
+})
 
 app.post('/compile', callName);
   
