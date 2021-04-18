@@ -113,3 +113,7 @@ function copyCode(element) {
   document.execCommand("copy");
   $temp.remove();
 }
+
+function ancher(element){
+  $(element)[0].click();
+}

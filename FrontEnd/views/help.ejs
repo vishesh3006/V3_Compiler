@@ -16,7 +16,7 @@
 <body>
     <!-- <div id="heading" contenteditable="true"></div> -->
     <div>
-        <nav class="navbar fixed-top bg-dark navbar-expand-lg navbar-dark">
+        <nav style="height: 9.2%;" class="navbar fixed-top bg-dark navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="/">V3 Compiler</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,15 +27,15 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/logout">Help</a>
+                    <a class="nav-link" href="/help">Documentation</a>
                 </li>
                 
             </ul>
 
-            <span style="padding-left: 8px;" class="navbar-text">
+            <span style="padding-left: 8px; color: white;" class="navbar-text">
                 Made with 💖 by V3
             </span>
         </div>
@@ -44,77 +44,100 @@
         
     </div>
 
-    <div id='left' style="height: 100%;">
+    <div>
+        <div id='left' style="height: 91.8%";>
             <div class="list-group" id="list-tab" role="tablist" style="height: 100%;">
-              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="padding-top: 2.5%; padding-bottom: 2.5%;"><img src="/img/writing.png" style="display: inline; width: 10%;">DOCUMENTATION</a>
-              <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Print Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Input Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">If Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Nested If Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">While Loop</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Functions without Arguments</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Functions with Arguments</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Return Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">GOTO Statement</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Example Program</a>
+                <a onclick="ancher('#a0')" style="height: 11%;" class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#doc" role="tab" aria-controls="home" style="padding-bottom: 1%;" ><img src="/img/writing.png" style="display: inline; width: 10%;">DOCUMENTATION</a>
+                <a onclick="ancher('#a1')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#pic1" role="tab" aria-controls="home">Print Statement</a>
+                <a onclick="ancher('#a2')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#pic2" role="tab" aria-controls="profile">Input Statement</a>
+                <a onclick="ancher('#a3')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#pic3" role="tab" aria-controls="messages">If Statement</a>
+                <a onclick="ancher('#a4')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic4" role="tab" aria-controls="settings">Nested If Statement</a>
+                <a onclick="ancher('#a5')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic5" role="tab" aria-controls="settings">While Loop</a>
+                <a onclick="ancher('#a6')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic6" role="tab" aria-controls="settings">Functions without Arguments</a>
+                <a onclick="ancher('#a7')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic7" role="tab" aria-controls="settings">Functions with Arguments</a>
+                <a onclick="ancher('#a8')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic8" role="tab" aria-controls="settings">Return Statement</a>
+                <a onclick="ancher('#a9')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic9" role="tab" aria-controls="settings">GOTO Statement</a>
+                <a onclick="ancher('#a10')" style="height: 9%;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#pic10" role="tab" aria-controls="settings">Example Program</a>
             </div>
-    </div>
-
-    <div id='right'>
-        <div>
-            <h1><img src="/img/image.png" style="display: inline; width: 10%;">DOCUMENTATION</h1>
         </div>
-        <div>
-            <div>
-                <h3 style="color: grey;">1. Print Statement</h3>
-                <img src="/img/pic3.jpeg" style="width: 75%;">
-            </div>
 
+        <div id='right'>
+            <section id="doc">
+                <h1><img src="/img/image.png" style="display: inline; width: 10%;">DOCUMENTATION</h1>
+                <a id="a0" href="#doc" style="display: none;"> hit me</a>
+            </section>
             <div>
-                <h3 style="color: grey;">2. Input Statement</h3>
-                <img src="/img/pic4.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic1" class="pic">
+                    <h3 style="color: grey;">1. Print Statement</h3>
+                    <img src="/img/pic3.jpeg" style="width: 75%;">
+                    <a id="a1" href="#pic1" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">3. If Statement</h3>
-                <img src="/img/pic2.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic2" class="pic">
+                    <h3 style="color: grey;">2. Input Statement</h3>
+                    <img src="/img/pic4.jpeg" style="width: 75%;">
+                    <a id="a2" href="#pic2" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">4. Nested If Statement</h3>
-                <img src="/img/pic10.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic3" class="pic">
+                    <h3 style="color: grey;">3. If Statement</h3>
+                    <img src="/img/pic2.jpeg" style="width: 75%;">
+                    <a id="a3" href="#pic3" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">5. While Loop</h3>
-                <img src="/img/pic5.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic4" class="pic">
+                    <h3 style="color: grey;">4. Nested If Statement</h3>
+                    <img src="/img/pic10.jpeg" style="width: 75%;">
+                    <a id="a4" href="#pic4" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">6. Function without Arguments</h3>
-                <img src="/img/pic6.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic5" class="pic">
+                    <h3 style="color: grey;">5. While Loop</h3>
+                    <img src="/img/pic5.jpeg" style="width: 75%;">
+                    <a id="a5" href="#pic5" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">7. Function with Arguments</h3>
-                <img src="/img/pic7.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic6" class="pic">
+                    <h3 style="color: grey;">6. Function without Arguments</h3>
+                    <img src="/img/pic6.jpeg" style="width: 75%;">
+                    <a id="a6" href="#pic6" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">8. Return Statement</h3>
-                <img src="/img/pic8.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic7" class="pic">
+                    <h3 style="color: grey;">7. Function with Arguments</h3>
+                    <img src="/img/pic7.jpeg" style="width: 75%;">
+                    <a id="a7" href="#pic7" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">9. GOTO Statement</h3>
-                <img src="/img/pic9.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic8" class="pic">
+                    <h3 style="color: grey;">8. Return Statement</h3>
+                    <img src="/img/pic8.jpeg" style="width: 75%;">
+                    <a id="a8" href="#pic8" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
-            <div>
-                <h3 style="color: grey;">10. Example Program</h3>
-                <img src="/img/pic1.jpeg" style="width: 75%;">
-            </div>
+                <div id="pic9" class="pic">
+                    <h3 style="color: grey;">9. GOTO Statement</h3>
+                    <img src="/img/pic9.jpeg" style="width: 75%;">
+                    <a id="a9" href="#pic9" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
 
+                <div id="pic10" class="pic">
+                    <h3 style="color: grey;">10. Example Program</h3>
+                    <img src="/img/pic1.jpeg" style="width: 75%;">
+                    <a id="a10" href="#pic10" style="display: none;"> hit me</a>
+                </div>
+                <div class="sp" style="border-bottom: 1px solid gray;width: 75%;height: 2px;"></div>
+
+            </div>
         </div>
     </div>
     <!-- <section id="help">
