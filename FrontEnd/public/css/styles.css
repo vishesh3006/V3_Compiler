@@ -124,6 +124,10 @@
       width: 100%;
   }
 
+  #team{
+    padding-top: 5%;
+  }
+
   #help{
     padding-top: 7%;
     padding-right: 5%;
