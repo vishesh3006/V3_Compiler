@@ -1,7 +1,3 @@
-
-
-
-
 $('div[contenteditable=true]').keydown(function(e) {
   // trap the return key being pressed
   if (e.keyCode == 13) {
@@ -53,30 +49,48 @@ $(document).ready( () => {
       //  console.log(req);
        if(req.result == 'Result: Compiling Completed'){
          document.getElementById('output').style.backgroundColor = '#68CD86'
-         document.getElementById('output').style.borderLeft = '5px solid green '
-         document.getElementById('content').style.minHeight = '40vh';
-         document.getElementById('content').style.height = '40vh';
-         document.getElementById('content').style.overflowY = 'scroll';
-         document.getElementById('compiled_output').style.display = 'block';
-         document.getElementById('compiled_output').innerText = req.output;
-         document.getElementById('compiled_output').style.minHeight = '40vh';
-         document.getElementById('compiled_output').style.height = '40vh';
-         document.getElementById('compiled_output').style.overflowY = 'scroll';
-         document.getElementById('output_nav').style.display = 'block';
-         document.getElementById('compile_nav').innerText = 'OUTPUT LANGUAGE: ' + lang;
+         document.getElementById('output').style.borderLeft = '5px solid green'
 
+        //  document.getElementById('content').style.minHeight = '40vh';
+         document.getElementById('content').style.height = '95%';
+         document.getElementById('content').style.width = '95%';
+         document.getElementById('compiled_output').style.height = '95%';
+        //  document.getElementById('content').style.width = '50vw'
+         document.getElementById('content').style.overflowY = 'scroll';
+        //  document.getElementById('compiled_output').style.display = 'inline';
+         document.getElementById('compiled_output').innerText = req.output;
+        //  document.getElementById('compiled_output').style.minHeight = '40vh';
+        //  document.getElementById('compiled_output').style.width = '50vw';
+         document.getElementById('compiled_output').style.overflowY = 'scroll';
+         document.getElementById('input_compile_nav').innerText = 'SOURCE CODE';
+         document.getElementById('input_nav').style.display = 'block'
+         document.getElementById('compile_nav').innerText = 'OUTPUT LANGUAGE: ' + lang;
+         document.getElementById('output_nav').style.display = 'block'
+         document.getElementById('compile_nav').style.paddingLeft = '10px'
+         document.getElementById('INPUT').style.width = '50vw'
+         document.getElementById('INPUT').style.height = '79%'
+         document.getElementById('INPUT').style.top = '95px'
+         document.getElementById('OUTPUT').style.width = '50vw'
+         document.getElementById('OUTPUT').style.display = 'block'
        }
        else {
+        document.getElementById('INPUT').style.top = '95px'
          document.getElementById('output').style.backgroundColor = '#E54D42'
          document.getElementById('output').style.borderLeft = '5px solid red'
-         document.getElementById('compiled_output').style.display = 'none';
-         document.getElementById('output_nav').style.display = 'none';
-         document.getElementById('content').style.minHeight = '100%';
-         document.getElementById('content').style.height = 'max-content';
-         document.getElementById('compiled_output').innerText = '';
-         document.getElementById('content').style.overflowY = 'visible';
+        //  document.getElementById('compiled_output').style.display = 'none';
+        //  document.getElementById('output_nav').style.display = 'none';
+        //  document.getElementById('content').style.minHeight = '100%';
+        //  document.getElementById('content').style.height = 'max-content';
+        //  document.getElementById('compiled_output').innerText = '';
+        //  document.getElementById('content').style.overflowY = 'visible';
+        document.getElementById('OUTPUT').style.display = 'none'
+        document.getElementById('input_nav').style.display = 'none'
+        document.getElementById('INPUT').style.width = '100vw'
+        document.getElementById('content').style.width = '100%';
+        document.getElementById('content').style.height = '100%';
+        document.getElementById('INPUT').style.height = '84%'
        }
-        document.getElementById('output').style.display = 'inline-block'
+        document.getElementById('output').style.display = 'block'
         document.getElementById('output').innerHTML =  req.result;
      });
   });
