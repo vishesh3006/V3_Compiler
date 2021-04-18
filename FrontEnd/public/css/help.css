@@ -1,0 +1,22 @@
+#left {
+    width: 35%;
+    display: inline-block;
+
+    position: fixed;
+    top: 9.2%;
+}
+
+
+#right {
+    width: 60%;
+    position: relative;
+    float: right;
+    overflow-y: auto;
+    display: inline;
+    max-height: 80%;
+    padding-top: 12%;
+}
+
+h1{
+    color: white;
+}

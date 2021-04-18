@@ -139,12 +139,13 @@ class Parser:
 
         # "FUNC" ident "() DO" nl {statement} "ENDFUNC" nl
         elif self.checkToken(TokenType.FUNC):
-            if funcPossible == 0:
-                self.abort("FUNCTIONS have to be declared at the start of program only")
-            funcPossible = 0
+            
             func_count += 1
             if func_count > 1:
                 self.abort("Cannot Declare Function Inside a Function")
+            if funcPossible == 0:
+                self.abort("FUNCTIONS have to be declared at the start of program only")
+            funcPossible = 0
             self.nextToken()
             if self.curToken.text in self.funcDeclared:
                 self.abort("Function Already Exists: " + self.curToken.text)

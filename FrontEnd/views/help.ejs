@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/help.css">
     <title>V3-Compiler</title>
 </head>
 <body>
     <!-- <div id="heading" contenteditable="true"></div> -->
     <div>
-        <nav class="navbar sticky-top bg-dark navbar-expand-lg navbar-dark">
+        <nav class="navbar fixed-top bg-dark navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="/">V3 Compiler</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,8 +44,80 @@
         
     </div>
 
+    <div id='left' style="height: 100%;">
+            <div class="list-group" id="list-tab" role="tablist" style="height: 100%;">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="padding-top: 2.5%; padding-bottom: 2.5%;"><img src="/img/writing.png" style="display: inline; width: 10%;">DOCUMENTATION</a>
+              <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Print Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Input Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">If Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Nested If Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">While Loop</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Functions without Arguments</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Functions with Arguments</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Return Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">GOTO Statement</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Example Program</a>
+            </div>
+    </div>
 
-    <section id="help">
+    <div id='right'>
+        <div>
+            <h1><img src="/img/image.png" style="display: inline; width: 10%;">DOCUMENTATION</h1>
+        </div>
+        <div>
+            <div>
+                <h3 style="color: grey;">1. Print Statement</h3>
+                <img src="/img/pic3.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">2. Input Statement</h3>
+                <img src="/img/pic4.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">3. If Statement</h3>
+                <img src="/img/pic2.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">4. Nested If Statement</h3>
+                <img src="/img/pic10.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">5. While Loop</h3>
+                <img src="/img/pic5.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">6. Function without Arguments</h3>
+                <img src="/img/pic6.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">7. Function with Arguments</h3>
+                <img src="/img/pic7.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">8. Return Statement</h3>
+                <img src="/img/pic8.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">9. GOTO Statement</h3>
+                <img src="/img/pic9.jpeg" style="width: 75%;">
+            </div>
+
+            <div>
+                <h3 style="color: grey;">10. Example Program</h3>
+                <img src="/img/pic1.jpeg" style="width: 75%;">
+            </div>
+
+        </div>
+    </div>
+    <!-- <section id="help">
         <div class="highlight" style="padding-left: 10px;">
 <pre>
 IF 2 &lt; 3 THEN 
@@ -56,7 +129,7 @@ ENDIF
             <button onclick="copyToClipboard('.highlight')" class="btn btn-light btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
         </div>
         
-    </section>
+    </section> -->
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
